@@ -1,0 +1,11 @@
+.applink {
+    
+}
+
+.primary {
+    color: var(--invert-prm-color);
+}
+
+.secondary {
+    color: var(--invert-sec-color);
+}
