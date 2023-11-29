@@ -1,4 +1,4 @@
-import { MainPageLazy } from "./UI/MainPage.lazy";
+import { MainPageLazy } from './UI/MainPage.lazy'
 export {
-    MainPageLazy as MainPage
+  MainPageLazy as MainPage
 }
