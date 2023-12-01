@@ -31,6 +31,7 @@ module.exports = {
         "@typescript-eslint",
         "i18next"
     ],
+    "ignorePatterns": ["jest.config.ts"],
     "rules": {
         "react/display-name": "off",
         "@typescript-eslint/naming-convention": "off",
