@@ -1,12 +1,11 @@
-import { useTranslation } from "react-i18next"
+import { useTranslation } from 'react-i18next'
 
 export default () => {
-
-    const {t, i18n} = useTranslation("mainpage")
+    const { t, i18n } = useTranslation('mainpage')
 
     return (
         <div>
-            <h1>{t("main_p_header")}</h1> 
+            <h1>{t('main_p_header')}</h1>
         </div>
     )
 }

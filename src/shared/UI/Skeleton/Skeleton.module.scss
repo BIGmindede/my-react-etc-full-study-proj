@@ -1,0 +1,30 @@
+.skeleton {
+    height: calc(100vh - 100px - var(--navbar-height));
+    width: calc(100vw - 100px - var(--sidebar-width-collapsed) );
+    margin: 50px auto;
+    background-color: silver;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 5px silver;
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    background-color: #ffffff90;
+    animation: shine 2s ease-in-out infinite;
+    box-shadow: 0 0 50px 25px #ffffff90;
+}
+
+@keyframes shine {
+    0% {
+        left: -5%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

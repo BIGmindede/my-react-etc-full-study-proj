@@ -1,25 +1,24 @@
-import AboutPage from 'pages/AboutPage/UI/AboutPage'
-import MainPage from 'pages/MainPage/UI/MainPage'
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { Skeleton } from 'shared/UI/Skeleton/Skeleton'
 import { routeConfig } from 'shared/config/routeConfig/routeConfig'
 
 const AppRouter = () => {
-  return (
-    <Suspense fallback= {<div>Loading...</div>}>
+    return (
         <Routes>
-                {
-                  routeConfig.map(({path, element}) => (
+            {
+                routeConfig.map(({ path, element }) => (
                     <Route key={path} path={path} element={
-                      <div className='page-wrapper'>
-                        {element}
-                      </div>  
+                        <Suspense fallback={ <Skeleton /> }>
+                            <div className='page-wrapper'>
+                                {element}
+                            </div>
+                        </Suspense>
                     }/>
-                  ))
-                }
+                ))
+            }
         </Routes>
-    </Suspense>
-  )
+    )
 }
 
 export default AppRouter

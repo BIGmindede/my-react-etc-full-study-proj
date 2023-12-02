@@ -42,6 +42,7 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": "warn",
         "indent": "off",
         "@typescript-eslint/indent": ["error", 4, { "ignoredNodes": ["ConditionalExpression"] }],
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        "@typescript-eslint/promise-function-async": "off"
     }
 }
