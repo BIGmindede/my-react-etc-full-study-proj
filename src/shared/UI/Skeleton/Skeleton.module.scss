@@ -1,6 +1,7 @@
 .skeleton {
     height: calc(100vh - 100px - var(--navbar-height));
-    width: calc(100vw - 100px - var(--sidebar-width-collapsed) );
+    min-width: calc(100vw - 100px - var(--sidebar-width) );
+    max-width: calc(100vw - 100px - var(--sidebar-width-collapsed) );
     margin: 50px auto;
     background-color: silver;
     position: relative;
