@@ -51,6 +51,8 @@ const config: Config = {
   // A list of paths to directories that Jest should use to search for files in
   rootDir: './src', 
 
+  modulePaths: ['<rootDir>'],
+
   transform: {
     '^.+\\.ts?$': 'ts-jest',
   },
