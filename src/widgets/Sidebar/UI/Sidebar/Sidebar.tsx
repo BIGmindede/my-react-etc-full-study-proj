@@ -9,7 +9,7 @@ import { BugButton } from 'app/providers/ErrorBoundary'
 interface SidebarProps {
     className?: string
 }
-export const Sidebar = ({className}: SidebarProps) => {
+export const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(true)
 
     const handleSidebarToggle = () => {
@@ -17,9 +17,11 @@ export const Sidebar = ({className}: SidebarProps) => {
     }
 
     return (
-        <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
+        <div data-testid='sidebar'
+            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
             <Button
                 onClick={handleSidebarToggle}
+                data-testid='sidebar-toggler'
             // eslint-disable-next-line i18next/no-literal-string
             >
                 toggle
