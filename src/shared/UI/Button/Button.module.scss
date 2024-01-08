@@ -1,11 +1,30 @@
 .button {
+    background-color: var(--sec-bg);
+    color: var(--accent-txt);
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 5px 1px var(--sec-bg);
     cursor: pointer;
 }
 
 .clear {
-    height: 100%;
-    border: 0;
     padding: 0;
+    border: none;
     background: none;
     outline: none;
+    box-shadow: unset
+}
+
+.outline {
+    padding: 10px 15px;
+    border: 1px solid var(--accent-txt);
+    background: none;
+    box-shadow: none;
+}
+
+.red {
+    background-color: #FF2400;
+    color: #FFF;
+    box-shadow: 0 0 5px 1px #B00000;
 }

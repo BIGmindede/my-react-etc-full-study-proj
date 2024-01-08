@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
 import { useState } from 'react'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
-import { Button } from 'shared/UI/Button/Button'
+import { Button, ButtonTheme } from 'shared/UI/Button/Button'
 import { LangSwitcher } from 'widgets/LangSwitcher/UI/LangSwitcher'
 import { BugButton } from 'app/providers/ErrorBoundary'
 
@@ -20,6 +20,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <div data-testid='sidebar'
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
             <Button
+                theme={ButtonTheme.OUTLINE}
                 onClick={handleSidebarToggle}
                 data-testid='sidebar-toggler'
             // eslint-disable-next-line i18next/no-literal-string

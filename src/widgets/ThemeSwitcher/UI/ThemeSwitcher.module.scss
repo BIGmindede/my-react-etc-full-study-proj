@@ -1,10 +1,10 @@
 .themeswitcher {
-    background-color: #000;
+    background-color: var();
     display: flex;
     align-items: center;
     height: 100%;
 }
 
 .themeswitcher * {
-    height: 100%;
+    width: 50px;
 }

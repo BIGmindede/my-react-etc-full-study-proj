@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 export default () => {
-    const { t, i18n } = useTranslation('mainpage')
+    const { t } = useTranslation('mainpage')
 
     return (
         <div>

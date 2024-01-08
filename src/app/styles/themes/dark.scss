@@ -1,8 +1,9 @@
 .app.dark {
-    --bg-color: rgb(0 73 73);
-    --invert-bg-color: rgb(230 230 230);
-    --prm-color: rgb(230 230 230);
-    --invert-prm-color: rgb(10 10 10);
-    --sec-color: rgb(0 216 187);
-    --invert-sec-color: rgb(0 73 73);
+    --accent-el: linear-gradient(90deg, #C33764, #1D2671);
+    --standart-el: #2B2739;
+    --main-bg: #1B1B25;
+    --sec-bg: #16161F;
+    --accent-txt: #FFF;
+    --invert-accent-txt: #000;
+    --pale-txt: #95939C;
 }

@@ -1,31 +1,32 @@
 .skeleton {
-    height: calc(100vh - 100px - var(--navbar-height));
-    min-width: calc(100vw - 100px - var(--sidebar-width) );
-    max-width: calc(100vw - 100px - var(--sidebar-width-collapsed) );
+    min-height: 50px;
+    height: 100%;
+    min-width: 50px;
+    width: 100%;
     margin: 50px auto;
-    background-color: silver;
-    position: relative;
-    border-radius: 20px;
+    background-color: #BBB;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px darkslategray;
     overflow: hidden;
-    box-shadow: 0 0 10px 5px silver;
+    position: relative;
 }
 
 .skeleton::after {
     content: "";
     position: absolute;
     height: 100%;
-    width: 5%;
-    background-color: #ffffff90;
-    animation: shine 2s ease-in-out infinite;
-    box-shadow: 0 0 50px 25px #ffffff90;
+    width: 40%;
+    transform: skewX(-45deg);
+    background-color: #FFFFFF70;
+    animation: shine 2s ease infinite;
 }
 
 @keyframes shine {
     0% {
-        left: -5%;
+        left: -150%;
     }
 
     100% {
-        left: 100%;
+        left: 150%;
     }
 }

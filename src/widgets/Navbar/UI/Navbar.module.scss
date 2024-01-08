@@ -1,10 +1,10 @@
 .navbar {
     width: 100%;
     height: var(--navbar-height);
-    background: var(--invert-bg-color);
+    background: var(--accent-el);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between 
+    justify-content: space-between;
 }
 
 .links {
@@ -15,5 +15,10 @@
     justify-content: right;
     gap: 20px;
     padding: 0 20px;
+}
+
+.links * {
+    user-select: none;
+    text-decoration: none;
 }
 
