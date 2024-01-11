@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:prod": "webpack serve --env mode=production port=3000",
+    "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "start": "webpack serve --env port=3000",
     "lint:ts": "eslint \"**/*.{ts, tsx}\"",
@@ -12,8 +12,10 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
+    "test:ui": "npx loki test",
+    "test:ui:approve": "npx loki approve",
     "storybook": "storybook dev -p 6006 -c ./config/storybook -s ../../public",
-    "build-storybook": "storybook build ./config/storybook -s ../../public"
+    "storybook:build": "storybook build -c ./config/storybook -s ./public"
   },
   "author": "",
   "license": "ISC",
@@ -85,5 +87,20 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^13.4.0",
     "react-router-dom": "^6.17.0"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
