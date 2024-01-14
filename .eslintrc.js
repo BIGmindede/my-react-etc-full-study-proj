@@ -31,7 +31,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
         semi: 'off',
-        indent: [4],
+        indent: [2, 4],
         '@typescript-eslint/indent': ['error', 4, { 'ignoredNodes': ['ConditionalExpression'] }],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         '@typescript-eslint/promise-function-async': 'off',
