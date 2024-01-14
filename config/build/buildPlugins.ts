@@ -17,12 +17,12 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
             chunkFilename: 'css/[name][contenthash:8].css'
         }),
         new webpack.DefinePlugin({
-            __IS_DEV__: JSON.stringify(isDev)
+            isDev: JSON.stringify(isDev)
         })
 
     ]
 
-    if (__IS_DEV__) {
+    if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin())
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false
