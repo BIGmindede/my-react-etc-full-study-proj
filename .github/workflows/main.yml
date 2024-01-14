@@ -31,9 +31,3 @@ jobs:
         run: npm run storybook:build
       - name: test screenshots
         run: npm run test:ui:ci
-      - name: upload screenshots
-        uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: loki-screenshots
-          path: artifacts/screenshots
