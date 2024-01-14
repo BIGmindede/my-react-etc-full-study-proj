@@ -1,0 +1,33 @@
+name: automated tests
+on:
+  push:
+    branches: '*'
+  pull_request:
+    branches: [master]
+jobs:
+  autotests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    -steps:
+      - uses: actions/checkout@v2
+      - name: Starting Node.js ${{matrix.node-version}}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{matrix.node-version}}
+      - name: install node-modules
+        run: npm install
+      - name: build production project
+        run: npm run build:prod
+      - name: lint test ts
+        run: npm run lint:ts
+      - name: lint test styles
+        run: npm run lint:scss
+      - name: test units
+        run: npm run test:unit
+      - name: build storybook
+        run: npm run storybook:build
+      - name: test screenshots
+        run: npm run test:ui:ci
+      
