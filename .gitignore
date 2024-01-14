@@ -8,6 +8,4 @@ node_modules
 # На случай если придется перейти на веб-шторм, что вряд ли но на всякий
 idea
 
-.loki
-
 /storybook-static
