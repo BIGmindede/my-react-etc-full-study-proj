@@ -11,8 +11,8 @@ export const buildStyleLoaders = (isDev: boolean) => {
                     modules: {
                         auto: /\.module.css$/i,
                         localIdentName: isDev
-                        ? '[path][name]__[local]--[hash:base64:8]'
-                        : '[hash:base64:8]'
+                            ? '[path][name]__[local]--[hash:base64:8]'
+                            : '[hash:base64:8]'
                     }
                 }
             }

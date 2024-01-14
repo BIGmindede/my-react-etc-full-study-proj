@@ -19,9 +19,9 @@ export default ({ config }: sbWpConf) => {
     config.resolve?.modules?.push(paths.src)
     config.resolve?.extensions?.push('.ts', '.tsx')
 
-    config.module.rules = config.module?.rules?.map((rule: RuleSetRule) => {
+    config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
-            return ({ ...rule, exclude: /\.svg$/i })
+            return { ...rule, exclude: /\.svg$/i }
         }
         return rule
     })

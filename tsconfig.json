@@ -2,7 +2,7 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "module": "ES2020",
+        "module": "ESNext",
         "target": "ES5",
         "jsx": "react-jsx",
         "allowJs": true,
@@ -23,7 +23,5 @@
         "./config/**/*.ts",
         "./src/**/*.ts",
         "./src/**/*.tsx",
-        "./src/**/*.jsx",
-        "./src/**/*.js"
-     ],     
+    ]    
 }

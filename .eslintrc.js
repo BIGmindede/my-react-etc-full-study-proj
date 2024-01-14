@@ -1,49 +1,71 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+    env: {
+        browser: true,
+        es2021: true,
+        jest: true
     },
-    "extends": [
-        "standard-with-typescript",
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        "plugin:i18next/recommended",
-        "plugin:storybook/recommended"
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended'
     ],
-    "overrides": [
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module'
+    },
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next'
+    ],
+    rules: {
+        'react/display-name': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off',
+        '@typescript-eslint/prefer-nullish-coalescing': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-unused-vars': 'warn',
+        semi: 'off',
+        indent: [2, 4],
+        '@typescript-eslint/indent': ['error', 4, { 'ignoredNodes': ['ConditionalExpression'] }],
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        '@typescript-eslint/promise-function-async': 'off',
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'import/prefer-default-export': ['off'],
+        'comma-dangle': ['error', 'never'],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] }
+        ],
+        'import/no-unresolved': 'off',
+        'no-unused-vars': 'warn',
+        'react/require-default-props': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'warn',
+        'react/function-component-definition': 'off',
+        'no-shadow': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'no-underscore-dangle': 'off',
+        'quote-props': 'off',
+        'linebreak-style': 'off',
+        'object-curly-newline': 'off',
+        'no-param-reassign': 'off'
+    },
+    globals: {
+        __IS_DEV__: true
+    },
+    overrides: [
         {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
             }
         }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "i18next"
-    ],
-    "ignorePatterns": ["jest.config.ts"],
-    "rules": {
-        "react/display-name": "off",
-        "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/strict-boolean-expressions": "off",
-        "@typescript-eslint/prefer-nullish-coalescing": "off",
-        "@typescript-eslint/no-floating-promises": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-unused-vars": "warn",
-        "indent": "off",
-        "@typescript-eslint/indent": ["error", 4, { "ignoredNodes": ["ConditionalExpression"] }],
-        'i18next/no-literal-string': ['error', {markupOnly: true}],
-        "@typescript-eslint/promise-function-async": "off"
-    }
+    ]
 }

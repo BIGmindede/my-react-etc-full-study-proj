@@ -6,7 +6,7 @@ interface useThemeRes {
     handleThemeBtn: () => void
 }
 
-export function useTheme (): useThemeRes {
+export function useTheme(): useThemeRes {
     const { appTheme, setAppTheme } = useContext(ThemeContext)
 
     const handleThemeBtn = () => {

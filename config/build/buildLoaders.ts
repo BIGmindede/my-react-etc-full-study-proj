@@ -3,7 +3,7 @@ import { type BuildOptions } from './types/config'
 import { buildStyleLoaders } from './buildLoaders/styleLoader'
 import { buildSvgLoader } from './buildLoaders/svgLoader'
 
-export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = buildSvgLoader()
 
     const fileLoader = {
