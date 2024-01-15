@@ -4,7 +4,7 @@ import { type BuildPaths } from 'build/types/config'
 import { buildStyleLoaders } from 'build/buildLoaders/styleLoader'
 import { buildSvgLoader } from 'build/buildLoaders/svgLoader'
 import { type RuleSetRule } from 'webpack'
-import { buildFontsLoader } from 'build/buildLoaders/fileLoader'
+import { buildFileLoader } from 'build/buildLoaders/fileLoader'
 
 interface sbWpConf {
     config: webpack.Configuration
@@ -29,7 +29,7 @@ export default ({ config }: sbWpConf) => {
 
     config.module?.rules?.push(buildSvgLoader())
     config.module?.rules?.push(...buildStyleLoaders(true))
-    config.module?.rules?.push(buildFontsLoader())
+    config.module?.rules?.push(buildFileLoader())
 
     return config
 }
