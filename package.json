@@ -106,7 +106,7 @@
         "preset": "iPhone 7"
       }
     },
-    "diffingEngine": "gm",
+    "diffingEngine": "pixelmatch",
     "threshold": 0.1
   }
 }
