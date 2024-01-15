@@ -4,7 +4,7 @@ import { type BuildPaths } from 'build/types/config'
 import { buildStyleLoaders } from 'build/buildLoaders/styleLoader'
 import { buildSvgLoader } from 'build/buildLoaders/svgLoader'
 import { type RuleSetRule } from 'webpack'
-import { buildFontsLoader } from 'build/buildLoaders/fontsLoader'
+import { buildFontsLoader } from 'build/buildLoaders/fileLoader'
 
 interface sbWpConf {
     config: webpack.Configuration
