@@ -2,14 +2,23 @@ import type webpack from 'webpack'
 import { type BuildOptions } from './types/config'
 import { buildStyleLoaders } from './buildLoaders/styleLoader'
 import { buildSvgLoader } from './buildLoaders/svgLoader'
-import { buildFileLoader } from './buildLoaders/fileLoader'
+import { buildFontsLoader } from './buildLoaders/fontsLoader'
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = buildSvgLoader()
 
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader'
+            }
+        ]
+    }
+
     const [cssloader, scssloader] = buildStyleLoaders(isDev)
 
-    const fileLoader = buildFileLoader()
+    const fontsLoader = buildFontsLoader()
 
     const tsLoader = {
         test: /\.tsx?$/,
@@ -40,6 +49,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     return [
         babelLoader,
         tsLoader,
+        fontsLoader,
         scssloader,
         cssloader,
         svgLoader,
