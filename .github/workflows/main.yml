@@ -31,3 +31,9 @@ jobs:
         run: npm run storybook:build
       - name: test screenshots
         run: npm run test:ui:ci
+      - name: Upload Artifacts
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: .loki/difference
