@@ -2,6 +2,7 @@ import type webpack from 'webpack'
 import { type BuildOptions } from './types/config'
 import { buildStyleLoaders } from './buildLoaders/styleLoader'
 import { buildSvgLoader } from './buildLoaders/svgLoader'
+import { buildFontsLoader } from './buildLoaders/fontsLoader'
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = buildSvgLoader()
@@ -16,6 +17,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     }
 
     const [cssloader, scssloader] = buildStyleLoaders(isDev)
+
+    const fontsLoader = buildFontsLoader()
 
     const tsLoader = {
         test: /\.tsx?$/,
@@ -49,6 +52,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         scssloader,
         cssloader,
         svgLoader,
-        fileLoader
+        fileLoader,
+        fontsLoader
     ]
 }

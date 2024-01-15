@@ -32,7 +32,6 @@
     "@storybook/react": "^7.6.6",
     "@storybook/react-webpack5": "^7.6.6",
     "@storybook/test": "^7.6.6",
-    "@stylistic/eslint-plugin-js": "^1.5.3",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^6.1.6",
@@ -64,6 +63,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "loki": "^0.33.1",
     "mini-css-extract-plugin": "^2.7.6",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.69.5",
@@ -104,6 +104,10 @@
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
+    },
+    "diffingEngine": "pixelmatch",
+    "pixelmatch": {
+      "threshold": 0.1
     }
   }
 }
