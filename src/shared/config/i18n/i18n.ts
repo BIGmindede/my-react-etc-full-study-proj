@@ -8,11 +8,7 @@ i18next
     .use(I18nextBrowserLanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLng: 'ru',
-        debug: !!__IS_DEV__,
-        interpolation: {
-            escapeValue: false
-        },
+        fallbackLng: 'en',
         backend: {
             loadPath: '/locals/{{lng}}/{{ns}}.json'
         }

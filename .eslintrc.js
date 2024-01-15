@@ -32,7 +32,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'warn',
         semi: 'off',
         indent: [2, 4],
-        '@typescript-eslint/indent': ['error', 4, { 'ignoredNodes': ['ConditionalExpression'] }],
+        'react/jsx-indent': [2, 4],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         '@typescript-eslint/promise-function-async': 'off',
         'max-len': ['error', { ignoreComments: true, code: 100 }],

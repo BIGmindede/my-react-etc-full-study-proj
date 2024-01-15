@@ -99,12 +99,12 @@
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false,
-        "delay": 700
+        "delay": 1000
       },
       "chrome.iphone7": {
         "target": "chrome.app",
         "preset": "iPhone 7",
-        "delay": 700
+        "delay": 1000
       }
     },
     "diffingEngine": "pixelmatch",
